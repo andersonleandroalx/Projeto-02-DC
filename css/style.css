@@ -13,59 +13,221 @@ html, body{
 .container{
     max-width: 1200px;
     margin: 0 auto;
+    /*background-color: thistle;*/
+    text-align: center;
+}
+.logo{
+    float: left;
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    background-image: url(/img/logo1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 header{
+    /*background-color: rgb(85, 199, 132);*/
     width: 100%;
-    height: 90vh;
-    padding: 40px 2%;
-    max-height: 800px;
-    background-position: center;
-    background-size: cover;
+    height: 60vh;
+    padding: 30px 2%;
     background-image: url(/img/fundo_dev1.jpg);
-}
-header .logo{
-    float: left;
-    width: 160px;
-    height: 40px;
-    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .clear{
     clear: both;
 }
 /* iniciando menu */
-header nav{
+nav{
+    /*background-color: rgb(139, 138, 209);*/
     float: right;
+    display: inline-block;
 }
-header nav ul{
+ul{
     list-style-type: none;
 }
-header nav li{
+nav li{
     float: left;
-    padding: 0 20px;
+    padding: 5px 7px;
 }
 header nav a{
     color: white;
     text-decoration: none;
-    background-color: rgba(128, 128, 128, 0.541);
-    padding: 0px 25px;
+    background-color: rgba(70, 70, 70, 0.541);
+    padding: 5px 25px;
+    margin-top: 10px;
     border-radius: 20px;
-    font-weight: bold;
+    font-weight: 300;
+    transition: 0.3s;
 }
 a:hover{
     background-color: #fff;
     color: #000;
 }
 
-/* iniciando chamada1 */
+
+/* iniciando menu */
 .chamada1{
     float: right;
-    margin: 90px 0;
-    width: 500px;
-    height: 500px;
-    background-color: rgba(197, 197, 197, 0.5);
+    margin: 50px 100px;
+    width: 50%;
+    height: 50%;
+    padding: 40px;
+    background-color: rgba(197, 197, 197, 0.7);
+    border-radius: 20px;
+}
+
+/* iniciando section1 */
+section.sessao1{
+    width: 100%;
+}
+.texto-sessao1{
+    float: left;
+    width: 50%;
+    padding: 10px 3%;
+    text-align: left;
+    /*background-color: olivedrab;*/
+}
+.texto-sessao1 h2{
+    font-size: 30px;
+    font-weight: 400;
+}
+.texto-sessao1 h2{
+    font-weight: 300;
+    font-size: 26px;
+}
+.texto-sessao1 p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;  
+}
+.texto-sessao1 li{
+    font-size: 18px;
+    list-style-position: inside;
+    list-style-type: square;
+    padding-bottom: 5px;
+}
+.btn1-texto{
+    background-color: #ff703d;
+    width: 165px;
+    height: 36px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
     border-radius: 20px;
     text-align: center;
+    line-height: 36px;
+    transition: 0.3s;
 }
-.chamada h2{
-    font-size: 30px;
+.btn1-texto:hover{
+    background-color: #271d19;
+    width: 165px;
+    height: 36px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 36px;
 }
+.img-sessao1{
+    float: right;
+    /*border: solid #000;*/
+    width: 49%;
+}
+
+
+/* iniciando menu */
+@media screen and (max-width: 900px){
+    header{
+        /*background-color: rgb(178, 199, 85);*/
+        width: 100%;
+        height: 60vh;
+        padding: 5px 2%;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        float: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 200px;
+        height: 80px;
+        border: solid #000;
+        background-image: url(/img/logo1.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    nav{
+        /*background-color: rgb(139, 138, 209);*/
+        float: none;
+    }
+    nav li{
+        float: left;
+        padding: 18px 5px;
+    }
+    header nav a{
+        color: white;
+        text-decoration: none;
+        background-color: rgb(67, 59, 192);
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-weight: 300;
+        transition: 0.3s;
+    }
+    .chamada1{
+        float: none;
+        text-align: left;
+        margin: 10px;
+        width: 90%;
+        height: 30%;
+        padding: 20px;
+        background-color: rgba(194, 194, 194, 0.6);
+        border-radius: 20px;
+    }
+    .texto-sessao1{
+        float: none;
+        width: 100%;
+        padding: 10px 3%;
+        
+        /*background-color: olivedrab;*/
+    }
+    .btn1-texto{
+        text-align: center;
+    }
+    .img-sessao1{
+        float: none;
+        /*border: solid #000;*/
+        width: 100%;
+    }
+}
+/*
+@media only screen and (orientation: landscape){
+    .chamada1{
+        float: none;
+        text-align: left;
+        margin: 10px;
+        width: 50%;
+        height: 30%;
+        padding: 20px;
+        background-color: rgba(165, 51, 51, 0.7);
+        border-radius: 20px;
+    }
+    header{
+        background-color: rgb(115, 121, 88);
+        width: 100%;
+        height: 60vh;
+        padding: 5px 2%;
+    }
+}
+*/
